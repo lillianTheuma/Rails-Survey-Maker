@@ -41,8 +41,9 @@ class QuestionsController < ApplicationController
     @question.destroy
     redirect_to survey_path(@question.survey)
   end
+
   private
   def question_params
-    params.require(:question).permit(:name)
+    params.require(:question).permit(:name, :answer1, :answer2, :answer3)
   end
 end

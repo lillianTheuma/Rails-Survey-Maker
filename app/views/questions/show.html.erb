@@ -1,6 +1,13 @@
 <h1>Question: <%= @question.name %></h1>
 <h2>Survey: <%= @survey.name %></h2>
 
+<h2>question: <%= @question.answer1 %></h2>
+
+<h2>question: <%= @question.answer2 %></h2>
+
+<h2>question: <%= @question.answer3 %></h2>
+
+
 <p><%= link_to "Edit question", edit_survey_question_path(@survey, @question) %></p>
 <p><%= link_to "Delete question", survey_question_path(@survey, @question),
                         :data => {:confirm => "Are you sure?",

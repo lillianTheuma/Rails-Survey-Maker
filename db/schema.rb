@@ -15,15 +15,12 @@ ActiveRecord::Schema.define(version: 2020_01_14_211430) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "quesitons", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "questions", force: :cascade do |t|
     t.string "name"
     t.integer "survey_id"
+    t.string "answer1"
+    t.string "answer2"
+    t.string "answer3"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
